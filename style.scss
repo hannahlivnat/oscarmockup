@@ -1,0 +1,348 @@
+//comments
+//I would love feedback on my styling for background images and positioning in correlation with images (scaling, etc.),
+//I really struggled with that part of positioning!
+
+//import fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&family=Roboto+Slab:wght@300;400;500;900');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600');
+
+//Fonts and Color Scheme
+$roboto: 'Roboto Slab', serif; 
+$opensans: 'Open Sans', sans-serif;
+$montserrat: Montserrat, sans-serif;
+$poppins: Poppins, sans-serif;
+
+$dark-blue: #0836be;
+$lighter-blue: #3a64e1;
+
+$lighter-gray: #9198a0;
+$dark-gray: #1c314b;
+$lightest-gray: #eaecef;
+
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: .5em 1em .5em 4em;
+    z-index: 0;
+
+    .logo {
+        font-family: $poppins;
+        color: $dark-blue;
+        text-decoration: none;
+        font-size: 3.5em;
+        font-weight: 400;
+    }
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        justify-content: flex-end;
+        position: relative;
+        right: 0;
+        font-family: $opensans;
+
+        li {
+            margin: auto 2em;
+            font-size: 1.5em;
+        }
+
+        .phone-number a {
+            color: $lighter-gray;
+        }
+
+        .login a {
+            color: $dark-gray;
+        }
+    }
+}
+
+.toggle-bar {
+    border: 3px $lightest-gray solid;
+    border-radius: 5%;
+    padding: 5px 10px;
+    transition: all .3s;
+
+    .toggle-line {
+        //help from -- https://www.w3schools.com/howto/howto_css_menu_icon.asp
+        width: 35px;
+        height: 3px;
+        background-color: $dark-blue;
+        margin: 8px 0;
+    }
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+
+        .toggle-line {
+            background-color: #000000;
+        }
+    }
+}
+
+header {
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    background: url(images/OscarCover.png) no-repeat;
+    background-color: $dark-blue;
+    background-size: auto 100%;
+    background-position: bottom 0px right 0px;
+    width: 100%;
+
+    .header-content {
+       
+        position: relative;
+        top: 10em;
+        left: 7em;
+
+        h1, h2 {
+            color: #ffffff;
+        }
+    
+        h1 {
+            font-family: $roboto;
+            font-weight: 500;
+            font-size: 4.5em;
+            letter-spacing: .02em;
+            margin: 0;
+        }
+    
+        h2 {
+            font-family: $opensans;
+            font-weight: 300;
+            letter-spacing: .02em;
+            margin: 1.5em 0;
+            font-size: 2em;
+        }
+    
+        button {
+            color: $lighter-blue;
+            background-color: #ffffff;
+            border-radius: 5%;
+            padding: 1em 1.5em;
+            font-family: $opensans;
+            font-weight: 400;
+            letter-spacing: .02em;
+            font-size: 2em;
+            transition: all .3s;
+
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+//main section
+
+.main {
+
+    width: 90%;
+    margin: auto;
+
+    .info-box-holder {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-top: 5em;
+
+        .info-box {
+            border: 1px $lightest-gray solid;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            border-radius: 2%;
+            width: 25%;
+            height: 600px;
+
+            h3 {
+                color: $lighter-gray;
+                font-family: $montserrat;
+                font-weight: 300;
+                font-size: 1.3em;
+                letter-spacing: .02em;
+                text-align: center;
+                position: relative;
+                top: 2em;
+            }
+
+            h4 {
+                color: $dark-gray;
+                font-family: $opensans;
+                font-weight: 500;
+                font-size: 1.5em;
+                text-align: center;
+                position: relative;
+                top: .5em;
+            }
+
+            button {
+                background-color: #ffffff;
+                border: 2px $lightest-gray solid;
+                color: $lighter-gray;
+                padding: 1em 2.5em;
+                border-radius: 7%;
+                color: $lighter-gray;
+                font-family: $opensans;
+                font-size: 1em;
+                font-weight: 500;
+                align-self: center;
+                position: relative;
+                top: 2em;
+                transition: all .3s;
+
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.1);
+                }
+            }
+
+        }
+    }
+
+    .info1 {
+        background: url(images/concierge.jpg) no-repeat;
+        image-rendering: smooth;
+        background-size: 100% 80%;
+        background-position: left 200px;
+    }
+
+    .info2 {
+        background: url(images/doctor.jpg) no-repeat;
+        background-size: 100% 90%;
+        background-position: left 100px;
+    }
+
+    .info3 {
+        background: url(images/business.jpg) no-repeat;
+        background-size: 100% 80%;
+        background-position: left 200px;
+    }
+
+    //Get More Info Section
+
+    .get-more-info-section {
+        padding: 6em 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .smaller-h2 {
+            color: $lighter-gray;
+            font-family: $opensans;
+            font-weight: 400;
+            font-size: 2em;
+            text-align: center;
+            margin: .3em 0;
+        }
+    
+        .bigger-h2 {
+            color: #000000;
+            font-family: $roboto;
+            font-weight: 600;
+            font-size: 3em;
+            letter-spacing: .02em;
+            text-align: center;
+            margin: .3em 0;
+        }
+
+        .two-button-options {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            
+            button {
+                padding: .7em 5.5em;
+                font-family: $opensans;
+                font-weight: 400;
+                font-size: 1.5em;
+                margin: 3em 2em;
+                border-radius: 5%;
+                transition: all .3s;
+
+
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.1);
+                }
+            }
+
+        }
+
+        .for-you-button {
+            background-color: $dark-blue;
+            color: $lightest-gray;
+        }
+
+        .for-business-button {
+            background-color: #ffffff;
+            color: $dark-blue;
+            border: 3px $lightest-gray solid;
+        }
+    }
+}
+
+hr {
+    height: .5px;
+    width: 90%;
+    margin: auto;
+    background-color: $lightest-gray;
+}
+
+//footer
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 3em 0;
+
+    footer-column {
+        h3 {
+            color: $dark-gray;
+            font-family: $opensans;
+            font-weight: 400;
+            font-size: 1.5em;
+        }
+
+    }
+}
+
+.footer-list {
+
+    padding: 0;
+
+    li {
+        font-family: $opensans;
+        font-size: 1.2em;
+        color: $lighter-gray;
+        list-style: none;
+        margin-bottom: 1em;
+        
+        &:hover {
+            color: $dark-gray;
+            cursor: pointer;
+        }
+    }
+}
+
+

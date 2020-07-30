@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&family=Open+Sans:wght@300;400;600;700&family=Roboto+Slab:wght@300;400;500;900");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600");
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0.5em 1em 0.5em 4em;
+  z-index: 0;
+}
+nav .logo {
+  font-family: Poppins, sans-serif;
+  color: #0836be;
+  text-decoration: none;
+  font-size: 3.5em;
+  font-weight: 400;
+}
+nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: flex-end;
+  position: relative;
+  right: 0;
+  font-family: "Open Sans", sans-serif;
+}
+nav ul li {
+  margin: auto 2em;
+  font-size: 1.5em;
+}
+nav ul .phone-number a {
+  color: #9198a0;
+}
+nav ul .login a {
+  color: #1c314b;
+}
+
+.toggle-bar {
+  border: 3px #eaecef solid;
+  border-radius: 5%;
+  padding: 5px 10px;
+  transition: all 0.3s;
+}
+.toggle-bar .toggle-line {
+  width: 35px;
+  height: 3px;
+  background-color: #0836be;
+  margin: 8px 0;
+}
+.toggle-bar:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.toggle-bar:hover .toggle-line {
+  background-color: #000000;
+}
+
+header {
+  width: 100%;
+  height: 80%;
+  overflow: hidden;
+  background: url(images/OscarCover.png) no-repeat;
+  background-color: #0836be;
+  background-size: auto 100%;
+  background-position: bottom 0px right 0px;
+  width: 100%;
+}
+header .header-content {
+  position: relative;
+  top: 10em;
+  left: 7em;
+}
+header .header-content h1, header .header-content h2 {
+  color: #ffffff;
+}
+header .header-content h1 {
+  font-family: "Roboto Slab", serif;
+  font-weight: 500;
+  font-size: 4.5em;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+header .header-content h2 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  margin: 1.5em 0;
+  font-size: 2em;
+}
+header .header-content button {
+  color: #3a64e1;
+  background-color: #ffffff;
+  border-radius: 5%;
+  padding: 1em 1.5em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  font-size: 2em;
+  transition: all 0.3s;
+}
+header .header-content button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.main {
+  width: 90%;
+  margin: auto;
+}
+.main .info-box-holder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 5em;
+}
+.main .info-box-holder .info-box {
+  border: 1px #eaecef solid;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2%;
+  width: 25%;
+  height: 600px;
+}
+.main .info-box-holder .info-box h3 {
+  color: #9198a0;
+  font-family: Montserrat, sans-serif;
+  font-weight: 300;
+  font-size: 1.3em;
+  letter-spacing: 0.02em;
+  text-align: center;
+  position: relative;
+  top: 2em;
+}
+.main .info-box-holder .info-box h4 {
+  color: #1c314b;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  font-size: 1.5em;
+  text-align: center;
+  position: relative;
+  top: 0.5em;
+}
+.main .info-box-holder .info-box button {
+  background-color: #ffffff;
+  border: 2px #eaecef solid;
+  color: #9198a0;
+  padding: 1em 2.5em;
+  border-radius: 7%;
+  color: #9198a0;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1em;
+  font-weight: 500;
+  align-self: center;
+  position: relative;
+  top: 2em;
+  transition: all 0.3s;
+}
+.main .info-box-holder .info-box button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.main .info1 {
+  background: url(images/concierge.jpg) no-repeat;
+  image-rendering: smooth;
+  background-size: 100% 80%;
+  background-position: left 200px;
+}
+.main .info2 {
+  background: url(images/doctor.jpg) no-repeat;
+  background-size: 100% 90%;
+  background-position: left 100px;
+}
+.main .info3 {
+  background: url(images/business.jpg) no-repeat;
+  background-size: 100% 80%;
+  background-position: left 200px;
+}
+.main .get-more-info-section {
+  padding: 6em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.main .get-more-info-section .smaller-h2 {
+  color: #9198a0;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 2em;
+  text-align: center;
+  margin: 0.3em 0;
+}
+.main .get-more-info-section .bigger-h2 {
+  color: #000000;
+  font-family: "Roboto Slab", serif;
+  font-weight: 600;
+  font-size: 3em;
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin: 0.3em 0;
+}
+.main .get-more-info-section .two-button-options {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.main .get-more-info-section .two-button-options button {
+  padding: 0.7em 5.5em;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  margin: 3em 2em;
+  border-radius: 5%;
+  transition: all 0.3s;
+}
+.main .get-more-info-section .two-button-options button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+.main .get-more-info-section .for-you-button {
+  background-color: #0836be;
+  color: #eaecef;
+}
+.main .get-more-info-section .for-business-button {
+  background-color: #ffffff;
+  color: #0836be;
+  border: 3px #eaecef solid;
+}
+
+hr {
+  height: 0.5px;
+  width: 90%;
+  margin: auto;
+  background-color: #eaecef;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 3em 0;
+}
+footer footer-column h3 {
+  color: #1c314b;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
+.footer-list {
+  padding: 0;
+}
+.footer-list li {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2em;
+  color: #9198a0;
+  list-style: none;
+  margin-bottom: 1em;
+}
+.footer-list li:hover {
+  color: #1c314b;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
